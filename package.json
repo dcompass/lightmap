@@ -2,12 +2,6 @@
   "name": "react-app-mobx-ultimateversion",
   "version": "2.2.4",
   "description": "Boilerplate and tooling for JavaScript application development with React in multi-language",
-  "repository": "simonjoom/react-app-mobx-ultimateversion",
-  "author": "Simon  ",
-  "contributors": [
-    "Konstantin Tarkus <hello@tarkus.me> (https://tarkus.me)"
-  ],
-  "license": "MIT",
   "keywords": [
     "react",
     "reactjs",
