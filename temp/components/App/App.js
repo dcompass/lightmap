@@ -45,11 +45,11 @@ class App extends Component {
     setMeta: PropTypes.func.isRequired,
     muiTheme: PropTypes.object.isRequired,
   };
-  
+
   constructor(props) {
     super(props);
   }
-  
+
   getChildContext() {
     const context = this.props.context;
     return {
@@ -58,15 +58,12 @@ class App extends Component {
       muiTheme: this.props.appstate.ui.theme.getMui(),
     };
   }
-  
+
   render() {
-    const { ui, auth, modal, instructor } = this.props.appstate;
+    const { ui, auth, modal } = this.props.appstate;
     const bp = ui.breakpoints;
     const { xs, su, mu } = bp;
     const SU = style.su;
-    const {
-      listusers
-    } = instructor;
     // if account still not loaded lazy load chunk of it on click
     // to enable in production
     return (
@@ -77,9 +74,9 @@ class App extends Component {
           docked={ui.appNav.isDocked}
           accountMenuIsOpen={ui.appBar.accountMenuIsOpen}
         >
-          <Header listusers={listusers}/>
+          <Header />
         </AppNav>
-        
+
         <Paper className={cx({ [SU]: !ui.layoutIsShifted })}>
           <Toggle
             label="Toggle Theme"
@@ -96,7 +93,7 @@ class App extends Component {
             {this.props.children}
           </div>
         </Paper>
-        
+
         <Paper className={cx({ [SU]: !ui.layoutIsShifted })}
         >
           <Feedback />

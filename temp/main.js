@@ -10,7 +10,7 @@ import { readState, saveState } from 'history/lib/DOMStateStorage';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'mobx-react';
 import { MatchMediaProvider } from 'mobx-react-matchmedia';
-import App from './components/App/AppDev';
+import App from './components/App/App';
 //import injectTapEventPlugin from 'react-tap-event-plugin';
 import Layout from './components/Layout';
 import {
@@ -203,8 +203,8 @@ function createApp(hist) {
 createApp(history);
 // Enable Hot Module Replacement (HMR)
 if (module.hot) {
-  module.hot.accept('./components/App/AppDev.js', () => {
-    let App = require('./components/App/AppDev.js').default; // eslint-disable-line global-require
+  module.hot.accept('./components/App/App.js', () => {
+    let App = require('./components/App/App.js').default; // eslint-disable-line global-require
     render(history.getCurrentLocation(), true);
   });
   module.hot.accept('./routes.json', () => {
