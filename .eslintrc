@@ -1,0 +1,38 @@
+{
+  // Extend existing configuration
+  // from ESlint and eslint-plugin-react defaults.
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "installedESLint": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "React": true,
+    "jQuery": true,
+    "If": true,
+    "Else": true,
+    "For": true
+  },
+  "rules": {
+    "no-underscore-dangle": 0,
+    "no-param-reassign": 0,
+    "func-names": 0,
+    "new-cap": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 0,
+    "react/prefer-stateless-function": 0,
+    "no-console": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
+  }
+}
+
