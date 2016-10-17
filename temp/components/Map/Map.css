@@ -1,0 +1,42 @@
+/*
+ * Copyright (c) 2016. SkiScool.
+ */
+@import '../variables.css';
+
+.mapContainer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.toolBarbot {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 48px;
+    background-color: rgba(25, 25, 25, 0.6);
+}
+
+.toolBar {
+    background-color: rgba(25, 25, 25, 0.6);
+}
+
+.toolBarAd {
+    background-color: rgba(25, 25, 25, 0.6);
+}
+
+.map {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.crossHair {
+    cursor: crosshair;
+}
+
+.selectTool {
+    width: 48px;
+    height: 48px;
+}

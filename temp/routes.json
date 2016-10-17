@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/",
+    "component": "./routes/Skiscool",
+    "lang": "fr",
+    "description": "Skiscool: Ecole de ski à courchevel 1850: SkiScool, école de ski dans les 3 Vallées. Rejoignez nous pour prendre des cours de ski dans les 3 vallees. Ski-Booking, Webcam, meteo. Nous nous efforcons de vous offrir les meilleurs prestations sur Courchevel. Réservation de cours de ski et de snowboard en ligne.",
+    "keywords": "3 vallées, moniteur de ski, école de ski courchevel, 1850, ski france, les alpes, ski 3 vallees,snowboard 3 vallees,lessons,courchevel ski resort,courchevel 1850,ski 3 valleys,ski school,vacances,vacations,coaching,meribel,Forecast,ski",
+    "title": "Skiscool",
+    "h1": "Notre concept",
+    "h2": "Réservez votre moniteur de ski en ligne"
+  },
+  {
+    "path": "/map_fr/:id?/:ie?",
+    "component": "./routes/Map",
+    "description": "Map Skiscool",
+    "title": "Skiscool",
+    "chunk": "map",
+    "h1": "Plan des pistes",
+    "h2": "Ou je me trouve?",
+    "lang": "fr"
+  },
+  {
+    "path": "/error",
+    "component": "./routes/Error",
+    "title": "Error",
+    "h1": "Skiscool",
+    "h2": "Sorry",
+    "description": "Error 404 Skiscool",
+    "chunk": "error",
+    "lang": "fr"
+  }
+]

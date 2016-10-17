@@ -1,0 +1,44 @@
+/*
+ * Copyright (c) 2016. SkiScool.
+ */
+@import '../variables.css';
+
+.root {
+    background: #333;
+    color: #fff;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: var(--max-content-width);
+}
+
+.text {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.textMuted {
+    composes: text;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.spacer {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.text,
+.link {
+    padding: 2px 5px;
+    font-size: 1em;
+}
+
+.link,
+.link:active,
+.link:visited {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: rgba(255, 255, 255, 1);
+}

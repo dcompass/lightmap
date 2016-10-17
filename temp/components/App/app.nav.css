@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2016. SkiScool.
+ */
+
+/* app.nav.css / AppNav */
+
+.drawer a {
+    padding: 15px;
+}
+
+.drawer a:hover {
+    background: #3A506B;
+}

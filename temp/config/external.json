@@ -1,0 +1,32 @@
+{
+  "dir": {
+    "css": "css",
+    "dist": "dist",
+    "js": "js",
+    "images": "images",
+    "src": "src",
+    "static": "static"
+  },
+  "production": {
+    "scripts": [
+      {
+        "file": "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js",
+        "identifier": "jQuery",
+        "import": "jquery"
+      },
+      {
+        "file": "react.min.js",
+        "identifier": "React",
+        "import": "react"
+      },
+      {
+        "file": "react-dom.min.js",
+        "identifier": "ReactDOM",
+        "import": "react-dom"
+      }
+    ],
+    "styles": [
+      "./dist/main.css"
+    ]
+  }
+}

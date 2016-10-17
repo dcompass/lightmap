@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2016. SkiScool.
+ */
+
+.markerOverlay {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.closeIcon {
+    width: 17px;
+    height: 17px;
+    padding: 1px;
+    margin: -10px auto 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: white;
+}

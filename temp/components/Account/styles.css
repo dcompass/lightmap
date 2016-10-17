@@ -1,0 +1,14 @@
+/*
+ * Copyright (c) 2016. SkiScool.
+ */
+@import '../variables.css';
+
+.icon {
+    height: 30px;
+}
+
+.dropzone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

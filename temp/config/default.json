@@ -1,0 +1,81 @@
+{
+  "host": "dev.skiscooldev.com",
+  "port": 3000,
+  "mongodb": "mongodb://localhost:27017/feather",
+  "public": "../public/",
+  "server": {
+    "db": {
+      "host": "DB_HOST",
+      "name": "DB_NAME",
+      "port": "DB_PORT"
+    },
+    "web": {
+      "host": "WEB_HOST",
+      "port": "WEB_PORT"
+    },
+    "api": {
+      "host": "API_HOST",
+      "port": "API_PORT"
+    }
+  },
+  "auth": {
+    "idField": "uuid",
+    "local": {
+      "idField": "uuid",
+      "endpoint": "/auth/local",
+      "userEndpoint": "/users",
+      "usernameField": "email",
+      "passwordField": "password",
+      "successRedirect": "/",
+      "failureRedirect": "/"
+    },
+    "token": {
+      "expiresIn": "5d",
+      "idField": "uuid",
+      "secret": "JNoSF4uRkGB1zhccVkpX3ulB/1KErbj/tuhCTY0dkpVNyYTU8bJiNC4ErCUK4sDSe/YMjuC0kqtlYnWuK8tHsQ==",
+      "successRedirect": "/",
+      "failureRedirect": "/"
+    },
+    "facebook": {
+      "provider": "facebook",
+      "endPoint": "/auth/facebook",
+      "idField": "uuid",
+      "callbackSuffix": "callback",
+      "clientID": "562112907171338",
+      "clientSecret": "f3750cc751c48b20d895003a173d6f0f",
+      "successRedirect": "/",
+      "failureRedirect": "/",
+      "permissions": {
+        "scope": [
+          "public_profile",
+          "email"
+        ]
+      },
+      "profileFields": [
+        "id",
+        "displayName",
+        "photos",
+        "email",
+        "first_name",
+        "last_name",
+        "age_range"
+      ]
+    },
+    "instagram": {
+      "idField": "uuid",
+      "endpoint": "/auth/instagram",
+      "clientID": "09ad8a5223fe471c9448a49ff07cc676",
+      "clientSecret": "31db525184ac4c3fba6a26b1005178aa",
+      "permissions": {
+        "scope": [
+          "basic"
+        ]
+      }
+    }
+  },
+  "mailgun": {
+    "apiKey": "key-16b01a72b63d61b75766cba1eaad18d3",
+    "domain": "sandbox66e11886c0144e349539f4fa914de3c7.mailgun.org",
+    "sender": "postmaster@sandbox66e11886c0144e349539f4fa914de3c7.mailgun.org"
+  }
+}

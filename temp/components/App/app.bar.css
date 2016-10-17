@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2016. SkiScool.
+ */
+
+/* app.bar.css / AppBar */
+
+.bar {
+    z-index: 999;
+    /* background: none;
+     color: #5BC0BE;*/
+}
+
+.leftShifted {
+    left: 256px;
+}
+
+.menuBar {
+    display: none !important;
+}
+
+@media (min-width: 64em) {
+    .menuBar {
+        flex: 1;
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}

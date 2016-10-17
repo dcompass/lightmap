@@ -1,0 +1,125 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3.8"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.1",
+    "basscss": "~8.0.1",
+    "basscss-align": "~1.0.2",
+    "basscss-background-colors": "~2.1.0",
+    "basscss-base-forms": "~2.0.2",
+    "basscss-base-reset": "~2.0.3",
+    "basscss-base-tables": "~1.0.2",
+    "basscss-base-typography": "~2.0.3",
+    "basscss-border": "~4.0.2",
+    "basscss-btn": "~1.1.1",
+    "basscss-btn-outline": "~1.1.0",
+    "basscss-btn-primary": "~1.1.0",
+    "basscss-color-forms": "~3.0.2",
+    "basscss-colors": "~2.2.0",
+    "basscss-flexbox": "~1.0.1",
+    "basscss-grid": "~2.0.0",
+    "basscss-hide": "~1.0.1",
+    "basscss-margin": "~1.0.7",
+    "basscss-padding": "~1.1.3",
+    "basscss-positions": "~1.0.5",
+    "basscss-responsive-states": "~1.0.6",
+    "basscss-type-scale": "~1.0.5",
+    "basscss-ui-utility-groups": "~1.0.1",
+    "basscss-utility-layout": "~2.0.4",
+    "body-parser": "^1.15.2",
+    "classnames": "^2.2.5",
+    "compression": "^1.6.2",
+    "cross-storage": "^1.0.0",
+    "crypto": "0.0.3",
+    "crypto-js": "^3.1.6",
+    "express-cors": "0.0.3",
+    "faker": "^3.1.0",
+    "fastclick": "^1.0.6",
+    "feathers": "^2.0.2",
+    "feathers-authentication": "^0.7.10",
+    "feathers-blob": "^1.2.0",
+    "feathers-configuration": "^0.3.3",
+    "feathers-hooks": "^1.5.8",
+    "feathers-mailgun": "^0.1.2",
+    "feathers-memory": "^0.7.5",
+    "feathers-mongoose": "^3.5.1",
+    "feathers-rest": "^1.4.3",
+    "feathers-socketio": "^1.4.1",
+    "flex-object": "^2.0.5",
+    "fs-blob-store": "^5.2.1",
+    "globule": "^1.0.0",
+    "history": "^3.0.0",
+    "https": "^1.0.0",
+    "intl": "^1.2.5",
+    "intl-locales-supported": "^1.0.0",
+    "leaflet": "^1.0.1",
+    "less": "^2.7.1",
+    "mapbox.js": "^2.4.0",
+    "markdown-it": "^8.0.0",
+    "markdown-it-attrs": "^0.7.1",
+    "markdown-it-ins": "^2.0.0",
+    "markdown-it-sub": "^1.0.0",
+    "material-ui": "^0.16.0-rc2",
+    "material-ui-country-flags": "^3.0.1",
+    "mkdirp": "^0.5.1",
+    "mobx": "^2.5.2",
+    "mobx-react": "^3.5.7",
+    "mobx-react-devtools": "^4.2.6",
+    "mobx-react-matchmedia": "^1.1.2",
+    "mongoose": "^4.6.2",
+    "normalize.css": "^4.2.0",
+    "passport-facebook": "^2.1.1",
+    "passport-facebook-token": "^3.3.0",
+    "passport-instagram": "^1.0.0",
+    "passport-instagram-token": "^2.3.0",
+    "react-dropzone": "^3.6.0",
+    "safe-access": "^0.1.0",
+    "seedrandom": "^2.4.2",
+    "serve-favicon": "^2.3.0",
+    "why-did-you-update": "0.0.8",
+    "winston": "^2.2.0"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015",
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-decorators-legacy",
+      "transform-runtime",
+      "babel-root-import",
+      "jsx-control-statements"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js"
+          ]
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint actions components core routes test utils main.js",
+    "build": "react-app build",
+    "start": "react-app run",
+    "download": "babel-node ./feather/map",
+    "fixture": "babel-node ./feather/fixture"
+  },
+  "devDependencies": {
+    "video.js": "^5.11.7"
+  }
+}
