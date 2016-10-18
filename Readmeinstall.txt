@@ -65,8 +65,12 @@ then
 2)run nginx
 sudo nginx (sudo is important)
 
-3)
-npm install
+In / (root)
+3) run the api (feather)
+node ./bin/server
+
+4) finally run the application
+npm start
 
 go in your browser in 
 https://fr.skiscooldev.com
