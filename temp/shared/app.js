@@ -13,7 +13,7 @@ const storage = (process.env.BROWSER) ? window.localStorage : null;
 // console.log(`http://${process.env.API_HOST}:${process.env.API_PORT}`);
 //* */ const uri = `http://${process.env.API_HOST}:${process.env.API_PORT}`;
 //(process.env.HOSTIMG)
-const host = 'https://dev.skiscooldev.com';
+const host = `https://${process.env.SITE}`;
 const socket = io(host, {
   secure: true,
   port: 3000,

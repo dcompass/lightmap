@@ -72,9 +72,9 @@ module.exports = config => {
             // server: {
             //   baseDir: 'public',
             open: false,
-            host: 'dev.skiscooldev.com',
+            host: 'fr.skiscooldev.com',
             socket: {
-              domain: 'dev.skiscooldev.com'
+              domain: 'fr.skiscooldev.com'
             },
             /*https: {
              key: "/usr/local/etc/openssl/private/apache-selfsigned.key",

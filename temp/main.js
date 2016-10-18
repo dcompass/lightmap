@@ -7,11 +7,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { readState, saveState } from 'history/lib/DOMStateStorage';
-import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'mobx-react';
 import { MatchMediaProvider } from 'mobx-react-matchmedia';
 import App from './components/App/App';
-//import injectTapEventPlugin from 'react-tap-event-plugin';
 import Layout from './components/Layout';
 import {
   addEventListener,
@@ -21,7 +19,6 @@ import {
 } from './core/DOMUtils';
 import router from './core/router';
 import history from './core/history';
-import dispatch from '~/core/dispatch';
 // import FastClick from 'fastclick';
 import $store from './store/stores'; // initialize stores
 import dicoarray_func from './get-dico_chunk';
@@ -47,8 +44,8 @@ function checkhostnamechange(oh) {
   const data = window.location.hostname;
   oldhost = window.location.hostname;
   if (data !== oh) {
-    console.log('hostchanging:' + process.env.SITEF);
-    if (data === process.env.SITEFR) {
+    console.log('hostchanging:' + process.env.SITE);
+    if (data === process.env.SITE) {
       routes = window.__routesfr__;
       window.__lang__ = 'fr';
     }
@@ -56,7 +53,6 @@ function checkhostnamechange(oh) {
   }
 }
 checkhostnamechange('');
-console.log('r')
 const MOUNT_NODE = document.getElementById('root');
 let currentLocation, currentLang;
 const context = {
@@ -101,23 +97,14 @@ const renderComplete = (s) => {
   }
 };
 function renderComponent(component) {
-  if (process.env.__DEV__) {
-    console.log('React rendering. Stat:');
-    if (window.location.search.includes('debugRender')) {
-      const { whyDidYouUpdate } = require('why-did-you-update');
-      whyDidYouUpdate(React);
-    }
-  }
   const breakpoints = store.ui.breakpoints;
   ReactDOM.render(
     <Provider context={context} appstate={store}>
-      <AppContainer>
         <MatchMediaProvider breakpoints={breakpoints}>
           <div>
             <App children={component}/>
           </div>
         </MatchMediaProvider>
-      </AppContainer>
     </Provider>,
     MOUNT_NODE, () => {
       // document.title = result.title || '';
@@ -201,14 +188,3 @@ function createApp(hist) {
 // Handle client-side navigation by using HTML5 History API
 // For more information visit https://github.com/ReactJSTraining/history/tree/master/docs#readme
 createApp(history);
-// Enable Hot Module Replacement (HMR)
-if (module.hot) {
-  module.hot.accept('./components/App/App.js', () => {
-    let App = require('./components/App/App.js').default; // eslint-disable-line global-require
-    render(history.getCurrentLocation(), true);
-  });
-  module.hot.accept('./routes.json', () => {
-    routes = require('./routes.json'); // eslint-disable-line global-require
-    render(history.getCurrentLocation(), true);
-  });
-}

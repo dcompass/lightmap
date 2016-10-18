@@ -43,6 +43,8 @@ const exposevar = {
   'process': {
     'env': {
       'BROWSER': true,
+      'HOSTIMG': JSON.stringify(process.env['HOSTIMG']),
+      'SITE': JSON.stringify(process.env['SITE']),
       'SITEFR': JSON.stringify(process.env['SITEFR']),
       'SITERU': JSON.stringify(process.env['SITERU']),
       'SITEUK': JSON.stringify(process.env['SITEUK']),
@@ -114,22 +116,6 @@ const config = {
     // Emit a JSON file with assets paths
     // https://github.com/sporto/assets-webpack-plugin#options
 
-    new CopyWebpackPlugin([{
-      from: 'assets',
-      to: ''
-    }], {
-      ignore: [
-        // Doesn't copy any files with a txt extension
-        '*.txt',
-        'tiles*.png',
-        // Doesn't copy any file, even if they start with a dot
-        { glob: 'tiles/*', dot: true }
-      ],
-      // By default, we only copy modified files during
-      // a watch or webpack-dev-server build. Setting this
-      // to `true` copies all files.
-      copyUnmodified: true
-    }),
     new AssetsPlugin({
       path: path.resolve(process.cwd(), './public/dist'),
       filename: 'assets.json',
@@ -317,12 +303,4 @@ config.plugins.push(new ExtractTextPlugin("[name].css")); // extracts seperate c
  cssProcessorOptions: { discardComments: { removeAll: true } }
  }));
  */
-// Hot Module Replacement (HMR) + React Hot Reload
-if (hmr) {
-  babelConfig.plugins.unshift('react-hot-loader/babel');
-  config.entry.main.unshift('react-hot-loader/patch', 'webpack-hot-middleware/client');
-  config.plugins.push(new webpack.HotModuleReplacementPlugin());
-  config.plugins.push(new webpack.NoErrorsPlugin());
-}
-
 module.exports = config;

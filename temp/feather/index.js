@@ -13,9 +13,9 @@ function logServerConfig(type = null) {
     this.logger.info('------------------------------------------');
     this.logger.info('API Listening at:', url);
     this.logger.info('------------------------------------------');
-    this.logger.info('Database Host:', process.env.DB_HOST);
-    this.logger.info('Database Name:', process.env.DB_NAME);
-    this.logger.info('Database Port:', process.env.DB_PORT);
+    this.logger.info('Database Host:', app.get('server').db.host);
+    this.logger.info('Database Name:', app.get('server').db.name);
+    this.logger.info('Database Port:', app.get('server').db.port);
     this.logger.info('------------------------------------------');
   }
   if (type !== 'API') {
@@ -27,11 +27,18 @@ function logServerConfig(type = null) {
     this.logger.info('------------------------------------------');
   }
 }
-//const server = app.listen(process.env.API_PORT);
-//server.on('listening', logServerConfig.bind(app, 'API'));
+let pathkey, pathcert;
+if (process.env.NODE_ENV === "development") {
+  pathkey = path.join(__dirname, 'resources', 'apache-selfsigned.key');
+  pathcert = path.join(__dirname, 'resources', 'apache-selfsigned.pem');
+} else {
+  pathkey = '/etc/letsencrypt/live/fr.skiscool.com/privkey.pem';
+  pathcert = '/etc/letsencrypt/live/fr.skiscool.com/fullchain.pem';
+}
+
 const httpsServer = https.createServer({
-  key: fs.readFileSync(path.join(__dirname, 'resources', 'apache-selfsigned.key')),
-  cert: fs.readFileSync(path.join(__dirname, 'resources', 'apache-selfsigned.pem')),
+  key: fs.readFileSync(pathkey),
+  cert: fs.readFileSync(pathcert),
   rejectUnauthorized: false,
   requestCert: false
 }, app).listen(process.env.API_PORT);

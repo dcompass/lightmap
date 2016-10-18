@@ -4,7 +4,7 @@ We use a proxy to simulate a real website with nginx so we have a hosts file and
 
 
 In linux:
-sudo apt-get install nginx 
+sudo apt-get install nginx ....
 
 For mac: (i recommande)
 if yu ve not home-brew
@@ -20,20 +20,19 @@ brew install nginx
 see http://blog.teamtreehouse.com/install-node-js-npm-mac
 
 
-
 copy my nginx config from temp/domain-conf-nginx
 cp temp/domain-conf-nginx/nginx /usr/local/etc/
 cp temp/domain-conf-nginx/openssl /usr/local/etc/
 
 add in /etc/hosts this line:
-127.0.0.1	localhost dev.skiscooldev.com
+127.0.0.1	localhost fr.skiscooldev.com
 
 
 go to /temp
 run
 make install
 
-Manual action to apply 
+Manual action to apply !! important
 unzip mapbox.js.zip to /temp/node_modules (replace the installed one by mine)
 unzip match-media-mock.zip to /temp/node_modules (replace the installed one by mine)
 unzip material-ui-country-flags.zip to /temp/node_modules (replace the installed one by mine)
@@ -42,14 +41,18 @@ unzip validatorjs.zip to /temp/node_modules (replace the installed one by mine)
 
 then
 delete in /temp/node_module 
-├── react-addons-create-fragment@15.3.2 
-│ ├── react-addons-transition-group@15.3.2 
-│ └─┬ react-event-listener@0.3.1 
-and react 
+all react
+react
+│ └─┬ react-event-listener@0.3.1
+
+exept:
+but let in /temp/node_module
+react-addons-create-fragment@15.3.2
+react-addons-transition-group@15.3.2
 
 go to / (root)
 run
-make install
+npm install
 
 
 to start application in / (root) 
@@ -60,14 +63,13 @@ mongod (start mongo)
 
 then 
 2)run nginx
-
 sudo nginx (sudo is important)
 
 3)
-npm start
+npm install
 
 go in your browser in 
-https://dev.skiscooldev.com
+https://fr.skiscooldev.com
 
 login in the website with Facebook (faster and i didn't check manual register)
 

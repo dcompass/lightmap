@@ -23,7 +23,7 @@ export default class AuthStore {
   isConnected() {
     return this.Connected;
   }
-  
+
   @computed
   get theUser() {
     return this.user;
@@ -100,7 +100,7 @@ export default class AuthStore {
         const that = this;
         const $ = jQuery;
         managecrossstorage = ()=> {
-          window.hubstorage = new CrossStorageClient('https://localhost:3000/dist/hub.html');
+          window.hubstorage = new CrossStorageClient('/dist/hub.html');
           window.hubstorage.onConnect().then(function () {
             return window.hubstorage.get('feathers-jwt');
           }).then(function (res) {
@@ -196,7 +196,7 @@ export default class AuthStore {
      .catch((err) => {
      console.error('errorauth');
      console.error(err);
-     
+ 
      //in production only  window.localStorage.setItem('feathers-jwt', '');
      //  window.location.reload();
      //dtb changed deleting token or something happen

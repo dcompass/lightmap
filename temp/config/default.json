@@ -1,5 +1,5 @@
 {
-  "host": "dev.skiscooldev.com",
+  "host": "fr.skiscool.com",
   "port": 3000,
   "mongodb": "mongodb://localhost:27017/feather",
   "public": "../public/",
@@ -41,8 +41,8 @@
       "endPoint": "/auth/facebook",
       "idField": "uuid",
       "callbackSuffix": "callback",
-      "clientID": "562112907171338",
-      "clientSecret": "f3750cc751c48b20d895003a173d6f0f",
+      "clientID": "913281818721110",
+      "clientSecret": "bddac8959f89d29e8ec785465bd3e9aa",
       "successRedirect": "/",
       "failureRedirect": "/",
       "permissions": {

@@ -43,6 +43,7 @@ const exposevar = {
     'env': {
       'BROWSER': true,
       'HOSTIMG': JSON.stringify(process.env['HOSTIMG']),
+      'SITE': JSON.stringify(process.env['SITEDEV']),
       'SITEFR': JSON.stringify(process.env['SITEFR']),
       'SITERU': JSON.stringify(process.env['SITERU']),
       'SITEUK': JSON.stringify(process.env['SITEUK']),

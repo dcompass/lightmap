@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "animate.css": "^3.5.1",
+    "async": "^2.1.2",
     "basscss": "~8.0.1",
     "basscss-align": "~1.0.2",
     "basscss-background-colors": "~2.1.0",
