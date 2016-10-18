@@ -11,7 +11,7 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'mobx-react';
 import { MatchMediaProvider } from 'mobx-react-matchmedia';
 import App from './components/App/AppDev';
-//import injectTapEventPlugin from 'react-tap-event-plugin';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import Layout from './components/Layout';
 import {
   addEventListener,
@@ -168,7 +168,7 @@ function render(location, force) {
 function createApp(hist) {
   currentLocation = hist.getCurrentLocation();
   currentLocation.pathname = 'init';
-  //injectTapEventPlugin();
+  injectTapEventPlugin();
   const removeHistoryListener = history.listen(render);
   history.replace(history.getCurrentLocation());
   let originalScrollRestoration;
