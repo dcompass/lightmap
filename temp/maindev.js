@@ -113,9 +113,7 @@ function renderComponent(component) {
     <Provider context={context} appstate={store}>
       <AppContainer>
         <MatchMediaProvider breakpoints={breakpoints}>
-          <div>
             <App children={component}/>
-          </div>
         </MatchMediaProvider>
       </AppContainer>
     </Provider>,

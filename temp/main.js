@@ -101,9 +101,7 @@ function renderComponent(component) {
   ReactDOM.render(
     <Provider context={context} appstate={store}>
         <MatchMediaProvider breakpoints={breakpoints}>
-          <div>
             <App children={component}/>
-          </div>
         </MatchMediaProvider>
     </Provider>,
     MOUNT_NODE, () => {
