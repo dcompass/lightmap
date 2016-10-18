@@ -18,7 +18,4 @@ const Header = () => (
     </div>
   </div>
 )
-Header.propTypes = {
-  listusers: PropTypes.array.isRequired
-};
 export default Header;
