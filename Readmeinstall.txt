@@ -21,8 +21,8 @@ see http://blog.teamtreehouse.com/install-node-js-npm-mac
 
 
 copy my nginx config from temp/domain-conf-nginx
-cp temp/domain-conf-nginx/nginx /usr/local/etc/
-cp temp/domain-conf-nginx/openssl /usr/local/etc/
+cp temp/domain-conf-nginx/nginx/*.*  /usr/local/etc/
+cp temp/domain-conf-nginx/openssl/*.*  /usr/local/etc/
 
 add in /etc/hosts this line:
 127.0.0.1	localhost fr.skiscooldev.com
