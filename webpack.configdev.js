@@ -71,7 +71,7 @@ const config = {
   // The base directory for resolving the entry option
   context: process.cwd(),
   entry: {
-    main: ['./maindev.js'],
+    main: ['react', 'react-dom', './maindev.js'],
     vendor: ['font-awesome-webpack!' + path.resolve(process.cwd(), './font-awesome.configdev.js'), 'mobx', 'mobx-react', 'lodash']
   },
 
@@ -266,8 +266,8 @@ const config = {
     failOnWarning: false,
     failOnError: true
    },*/
-
-  externals: externalss,
+  
+  // externals: externalss,
   // The list of plugins for PostCSS
   // https://github.com/postcss/postcss
   postcss(bundler) {

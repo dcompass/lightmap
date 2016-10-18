@@ -47,8 +47,8 @@ function checkhostnamechange(oh) {
   const data = window.location.hostname;
   oldhost = window.location.hostname;
   if (data !== oh) {
-    console.log('hostchanging:' + process.env.SITEF);
-    if (data === process.env.SITEFR) {
+    console.log('hostchanging:' + process.env.SITE);
+    if (data === process.env.SITEDEVFR) {
       routes = window.__routesfr__;
       window.__lang__ = 'fr';
     }
